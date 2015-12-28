@@ -1,0 +1,14 @@
+{
+  "require": {
+    "monolog/monolog": "^1.17",
+    "phpmailer/phpmailer": "^5.2",
+    "dannyvankooten/php-router": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "config\\": "config/",
+      "core\\": "core/",
+      "models\\": "models/"
+    }
+  }
+}
