@@ -6,7 +6,7 @@
  * Time: 13:07
  */
 
-namespace controllers;
+namespace front\controllers;
 
 use core\BaseController;
 use models\Users;

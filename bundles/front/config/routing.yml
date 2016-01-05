@@ -1,0 +1,6 @@
+namespace: '\front\controllers\'
+routes:
+  home:
+    path: '/'
+    controller: 'defaultController::indexAction'
+    methods: 'GET'

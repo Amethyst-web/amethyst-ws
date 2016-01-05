@@ -2,13 +2,17 @@
   "require": {
     "monolog/monolog": "^1.17",
     "phpmailer/phpmailer": "^5.2",
-    "dannyvankooten/php-router": "dev-master"
+    "dannyvankooten/php-router": "dev-master",
+    "symfony/yaml": "^3.0"
   },
   "autoload": {
     "psr-4": {
       "config\\": "config/",
       "core\\": "core/",
       "models\\": "models/"
+    },
+    "psr-0": {
+      "": "bundles/"
     }
   }
 }

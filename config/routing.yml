@@ -1,0 +1,5 @@
+routes:
+  404:
+    path: '/404'
+    methods: 'GET, POST, PUT, DELETE, UPDATE'
+    controller: 'defaultController::notFoundAction'
