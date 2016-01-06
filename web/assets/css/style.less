@@ -1,8 +1,220 @@
+@import "default";
+
+html{
+  height: 100%;
+}
 body{
   height: 100%;
+  min-height: 100%;
   width: 100%;
-  background-size: contain;
+  background: url(../img/bg.png);
+  color: #fff;
+  background-size: cover;
+  font-family: "Open Sans",sans-serif;
+}
+@top-menu-height: 80px;
+@footer-offer-height: 40px;
+@footer-content-height: 105px;
+@footer-copyright-height: 30px;
+@footer-height: @footer-offer-height + @footer-content-height + @footer-copyright-height;
+//@footer-height: 100px;
+.index-content{
+  box-sizing: border-box;
+  padding-top: @top-menu-height + 40px;
+  padding-bottom: @footer-height;
+  text-align: center;
+  width: inherit;
+  height: inherit;
+  .row{
+    display: table;
+    >div{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    &:first-child{
+      .name{
+        width: 40%;
+        &:first-child{
+          p{
+            margin-left: 80px;
+            margin-right: 20px;
+          }
+        }
+        &:last-child{
+          p{
+            margin-left: 20px;
+            margin-right: 80px;
+          }
+        }
+        p{
+          border-bottom: 1px solid;
+          padding-bottom: 5px;
+          font-size: 1em;
+          text-transform: uppercase;
+        }
+      }
+      .amethyst{
+        width: 20%;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .subscribe{
+    margin-top: 50px;
+    .input-group{
+      width: 500px;
+      height: 45px;
+      margin: auto;
+      border: 2px solid #18181e;
+      input[type=email]{
+        height: inherit;
+        width: 370px;
+        border: 0;
+        box-sizing: border-box;
+        background-color: #302f32;
+        padding-left: 7px;
+        padding-right: 7px;
+      }
+      button{
+        width: 130px;
+        vertical-align: top;
+        height: inherit;
+        border: 0;
+        background-color: #381a4b;
+        color: #fefefe;
+      }
+    }
+  }
+}
+.menu.horizontal{
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  background: url('../img/bg.png') no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  li {
+    display: inline-block;
+  }
+}
+.top-menu{
+  position: fixed;
+  width: 100%;
+  height: @top-menu-height;
+  background-color: #fdfcfd;
+  .mobile-toggle{
+    display: none;
+  }
+  .menu{
+    color: #501647;
+    right: 140px;
+    font-size: 18px;
+    top: 27px;
+    position: inherit;
+    li {
+      width: 120px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: inherit;
+  .offer{
+    background-color: #5a5a5a;
+    opacity: 0.5;
+    text-align: center;
+    height: @footer-offer-height;
+    p{
+      height: inherit;
+      font-size: 25px;
+      line-height: 36px;
+    }
+  }
+  .content{
+    background-color: #1b1c21;
+    opacity: 0.8;
+    height: @footer-content-height;
+    font-size: 19px;
+    .menu{
+      color: #ffffff;
+      position: relative;
+      top: 10px;
+      margin-left: 50px;
+      li{
+        vertical-align: middle;
+        width: 130px;
+        text-align: center;
+        &.logo{
+          width: auto;
+          a{
+            background-image: url('../img/logo_bw.png');
+            display: inline-block;
+            height: 80px;
+            width: 60px;
+          }
+        }
+      }
+    }
+    .social{
+      display: inline-block;
+      float: right;
+      margin-top: 8px;
+      margin-left: 0;
+      margin-right: 50px;
+      li {
+        width: auto;
+        a {
+          display: inline-block;
+          margin-left: 7px;
+          margin-right: 7px;
+          &.vk {
+            width: 54px;
+            height: 67px;
+            background-image: url('../img/vk.png');
+            &:hover {
+              background-image: url('../img/vk_h.png');
+            }
+          }
+          &.fb {
+            width: 56px;
+            height: 67px;
+            background-image: url('../img/fb.png');
+            &:hover {
+              background-image: url('../img/fb_h.png');
+            }
+          }
+          &.be {
+            width: 54px;
+            height: 67px;
+            background-image: url('../img/be.png');
+            &:hover {
+              background-image: url('../img/be_h.png');
+            }
+          }
+          &.inst {
+            width: 55px;
+            height: 67px;
+            background-image: url('../img/ins.png');
+            &:hover {
+              background-image: url('../img/ins_h.png');
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright{
+    height: @footer-copyright-height;
+    background-color: #14151a;
+    color: #5a5a5a;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+.upper{
+  text-transform: uppercase;
 }
