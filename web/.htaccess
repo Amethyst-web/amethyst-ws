@@ -1,3 +1,11 @@
 Options +FollowSymLinks
 RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} -f
+# RewriteRule .? - [L]
+RewriteBase /
+
+# Redirect all requests to index.php ignoring listed files extensions
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|bmp)$
+# Redirect all requests to index.php ignoring listed directories
+RewriteCond %{REQUEST_URI} !^/?(css|js|img|fonts|ect)/
 RewriteRule ^(.*)$ index.php [NC,L]
