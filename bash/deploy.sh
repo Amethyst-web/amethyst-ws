@@ -1,4 +1,3 @@
 #!/bin/bash
 git pull origin master
-cd ../web/assets/css
-lessc --clean-css style.less style.min.css
+lessc --clean-css ../web/assets/css/style.less ../web/assets/css/style.min.css
