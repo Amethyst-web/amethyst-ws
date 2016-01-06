@@ -1,12 +1,19 @@
 #!/bin/bash
+
+#ставим весь необходимый софт
 apt-get update
 apt-get install git-core
 apt-get install nodejs
 apt-get install npm
 npm install -g bower
 npm install -g less
+
+#конфигурим git
 git config --global user.email "neket313@gmail.com"
 git config --global user.name "HEKET313"
+
+#разворачиваем приложение
 cd /var/www
 git clone git@github.com:Amethyst-web/amethyst-ws.git
-deploy
+cd amethyst-ws/bash
+source deploy.sh
