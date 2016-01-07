@@ -9,7 +9,6 @@ $.ajaxSetup({
 });
 
 function checkData(data){
-    console.log(data);
     if(!isObject(data)){
         techErrorNotify();
         return false;

@@ -2,6 +2,6 @@
 /web/assets/js/libraries/bower_components
 /.idea
 /vendor
-/config/db.php
-/config/mailer.php
+/config/DB.php
+/config/Mailer.php
 /web/assets/css/style.min.css

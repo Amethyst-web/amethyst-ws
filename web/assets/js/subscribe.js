@@ -7,11 +7,9 @@ $(document).ready(function(){
         var $form = $(this);
         var $emailField = $form.find('[name=email]');
         $emailField.removeClass('error');
-        console.log($emailField);
         var email = $emailField.val();
         if(!checkEmail(email)){
             $emailField.addClass('error');
-            alert('asd');
             return false;
         }
         $.post(subscribe_path, {email: email}, function(data){
