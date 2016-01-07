@@ -17,4 +17,5 @@ git config --global color.ui true
 cd /var/www
 git clone git@github.com:Amethyst-web/amethyst-ws.git
 cd amethyst-ws/bash
+ln -s aw-deploy.sh ~/aw-deploy.sh
 source deploy.sh
