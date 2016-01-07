@@ -28,5 +28,5 @@ ln -s $PWD/amethyst-ws.conf /etc/apache2/sites-enabled/amethyst-ws.conf
 ln -s $PWD/aw-deploy.sh ~/aw-deploy.sh
 source deploy.sh
 cd ../web/assets/js/libraries
-bower install jquery
-bower install noty
+bower install --allow-root jquery
+bower install --allow-root noty
