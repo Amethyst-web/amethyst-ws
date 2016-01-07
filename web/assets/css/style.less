@@ -119,6 +119,7 @@ body{
     }
   }
 }
+@footer-transition-time: 0.5s;
 .footer{
   position: fixed;
   bottom: 0;
@@ -128,6 +129,8 @@ body{
     opacity: 0.5;
     text-align: center;
     height: @footer-offer-height;
+    transition: opacity @footer-transition-time;
+    -webkit-transition: opacity @footer-transition-time;
     p{
       height: inherit;
       font-size: 25px;
@@ -139,10 +142,12 @@ body{
     opacity: 0.8;
     font-size: 19px;
     overflow: hidden;
-    min-height: @footer-content-height;
+    min-height: 80px;
+    transition: opacity @footer-transition-time, min-height @footer-transition-time;
+    -webkit-transition: opacity @footer-transition-time, min-height @footer-transition-time;
     .menu{
       color: #ffffff;
-      top: 10px;
+      margin-top: 10px;
       margin-left: 50px;
       float: left;
       li{
@@ -152,11 +157,13 @@ body{
         &.logo{
           width: auto;
           a{
-            background-size: contain;
-            background: url('../img/logo_bw.png') no-repeat;
+            background: url(../img/logo_bw.png) no-repeat;
+            background-size: 40px;
             display: inline-block;
-            height: 84px;
-            width: 60px;
+            height: 64px;
+            width: 40px;
+            transition: width @footer-transition-time, height @footer-transition-time, background-size @footer-transition-time;
+            -webkit-transition: width @footer-transition-time, height @footer-transition-time, background-size @footer-transition-time;
           }
         }
       }
@@ -165,7 +172,9 @@ body{
       display: inline-block;
       float: right;
       right: 50px;
-      top: 18px;
+      margin-top: 6px;
+      transition: margin-top @footer-transition-time;
+      -webkit-transition: margin-top @footer-transition-time;
       li {
         width: auto;
         a {
@@ -209,11 +218,49 @@ body{
     }
   }
   .copyright{
-    height: @footer-copyright-height;
+    height: 0;
     background-color: #14151a;
     color: #5a5a5a;
     line-height: 30px;
     text-align: center;
+    transition: height @footer-transition-time;
+    -webkit-transition: height @footer-transition-time;
+  }
+  &:hover{
+    .offer{
+      opacity: 1;
+      transition: opacity 1s;
+      -webkit-transition: opacity 1s;
+    }
+    .content{
+      opacity: 1;
+      min-height: @footer-content-height;
+      transition: opacity @footer-transition-time, min-height @footer-transition-time;
+      -webkit-transition: opacity @footer-transition-time, min-height @footer-transition-time;
+      .menu{
+        li{
+          &.logo{
+            a{
+              background-size: 60px;
+              height: 84px;
+              width: 60px;
+              transition: width @footer-transition-time, height @footer-transition-time, background-size @footer-transition-time;
+              -webkit-transition: width @footer-transition-time, height @footer-transition-time, background-size @footer-transition-time;
+            }
+          }
+        }
+      }
+      .social{
+        margin-top: 18px;
+        transition: margin-top @footer-transition-time;
+        -webkit-transition: margin-top @footer-transition-time;
+      }
+    }
+    .copyright{
+      height: @footer-copyright-height;
+      transition: height @footer-transition-time;
+      -webkit-transition: height @footer-transition-time;
+    }
   }
 }
 .upper{
