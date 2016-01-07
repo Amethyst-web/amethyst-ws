@@ -18,10 +18,9 @@ git config --global color.ui true
 #разворачиваем приложение
 git clone git@github.com:Amethyst-web/amethyst-ws.git
 cd amethyst-ws
-#ставим композер
-curl -sS https://getcomposer.org/installer | php
 #ставим нужные библиотеки
 php composer.phar install
 cd bash
+ln -s $PWD/amethyst-ws.conf /etc/apache2/sites-enabled/amethyst-ws.conf
 ln -s $PWD/aw-deploy.sh ~/aw-deploy.sh
 source deploy.sh
