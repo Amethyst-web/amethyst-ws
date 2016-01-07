@@ -16,4 +16,8 @@ class defaultController extends BaseController
     public function indexAction(){
         $this->render();
     }
+
+    public function subscribeAction(){
+
+    }
 }

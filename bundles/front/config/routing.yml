@@ -4,3 +4,7 @@ routes:
     path: '/'
     controller: 'defaultController::indexAction'
     methods: 'GET'
+  subscribe:
+    path: '/subscribe'
+    controller: 'defaultController::subscribeAction'
+    methods: 'POST'
