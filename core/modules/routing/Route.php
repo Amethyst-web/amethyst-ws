@@ -40,16 +40,18 @@ class Route extends \PHPRouter\Route
         $selectedController = new $this->controllerClass();
         $parameters = $this->getParameters();
         $parameters['request'] = new Request($this);
-        $this->setParameters($parameters);
         if(method_exists($selectedController, 'beforeAction')){
-            call_user_func_array(array($selectedController, 'beforeAction'), $parameters);
+            $parameters['beforeResult'] = call_user_func_array(array($selectedController, 'beforeAction'), $parameters);
         }
         if(!method_exists($selectedController, $this->action)) {
             throw new Exception('Нет такого action\'a: '.$this->action);
         }
-        call_user_func_array(array($selectedController, $this->action), $parameters);
+        $parameters['actionResult'] = call_user_func_array(array($selectedController, $this->action), $parameters);
         if(method_exists($selectedController, 'afterAction')){
             call_user_func_array(array($selectedController, 'afterAction'), $parameters);
+        }
+        if($parameters['actionResult'] !== null){
+            die($parameters['actionResult']);
         }
     }
 }

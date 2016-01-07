@@ -13,10 +13,14 @@
         <div class="name"><p>Leshchev Nikita</p></div>
     </div>
     <div class="subscribe">
-        <form method="post">
+        <form method="post" id="subscribe-form">
             <div class="input-group">
                 <input type="email" name="email" id="email" placeholder="Ваш Email"><button type="submit">Подписаться</button>
             </div>
         </form>
     </div>
 </div>
+<script type="text/javascript">
+    var subscribe_path = '<?=$this->getPath('front', 'subscribe')?>';
+</script>
+<script type="text/javascript" src="/assets/js/subscribe.js"></script>

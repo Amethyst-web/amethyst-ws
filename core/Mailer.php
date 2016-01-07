@@ -10,20 +10,21 @@ namespace core;
 
 
 use PHPMailer;
+use config\Mailer as ConfMailer;
 
-class Mailer
+class Mailer extends PHPMailer
 {
-    public static function getMailer(){
-        $mail = new PHPMailer();
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'hookah.msk.service@gmail.com';
-        $mail->Password = 'UvSbtOAhlKgFsJ3b0wwy';
-        $mail->SMTPSecure = 'TLS';
-        $mail->Port = 587;
-        $mail->isHTML(true);
-        $mail->CharSet = "UTF-8";
-        return $mail;
+    function __construct($exceptions = false)
+    {
+        parent::__construct($exceptions);
+        $this->isSMTP();
+        $this->Host = 'smtp.gmail.com';
+        $this->SMTPAuth = true;
+        $this->Username = ConfMailer::USERNAME;
+        $this->Password = ConfMailer::PASSWORD;
+        $this->SMTPSecure = 'TLS';
+        $this->Port = 587;
+        $this->isHTML(true);
+        $this->CharSet = "UTF-8";
     }
 }

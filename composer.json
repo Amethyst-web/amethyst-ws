@@ -9,6 +9,7 @@
     "psr-4": {
       "config\\": "config/",
       "core\\": "core/",
+      "core\\modules\\": "core/modules",
       "models\\": "models/"
     },
     "psr-0": {

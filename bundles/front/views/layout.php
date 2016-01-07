@@ -9,6 +9,9 @@
 <head>
     <title>Веб-студия Аметист</title>
     <link rel="stylesheet" href="/assets/css/style.min.css">
+    <script type="text/javascript" src="/assets/js/libraries/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libraries/bower_components/noty/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libraries/functions.js"></script>
 </head>
 <body>
 <!--    <div class="top-menu">-->
@@ -25,7 +28,7 @@
 <!--        </ul>-->
 <!--    </div>-->
     <?php include $content; ?>
-    <div class="footer">
+    <div class="footer" style="display: none;">
         <div class="offer">
             <p>Расскажи о нас друзьям и получи скидку на наши услуги</p>
         </div>
@@ -40,10 +43,10 @@
             </ul>
             <ul class="menu horizontal social">
                 <li>Следите за нами: </li>
-<!--                <li><a href="#" class="be" title="Be"></a></li>-->
+                <li><a href="https://www.behance.net/AmethystWebStudio" class="be" title="Be"></a></li>
                 <li><a href="http://vk.com/amethystwebstudio" class="vk" title="Вконтакте"></a></li>
-<!--                <li><a href="#" class="fb" title="Instagramm"></a></li>-->
-<!--                <li><a href="#" class="inst" title="Facebook"></a></li>-->
+                <li><a href="https://www.instagram.com/amethyst_web_studio/?ref=badge" class="inst" title="Instagramm"></a></li>
+                <li><a href="https://www.facebook.com/amethystwebstudio/" class="fb" title="Facebook"></a></li>
             </ul>
         </div>
         <div class="copyright">

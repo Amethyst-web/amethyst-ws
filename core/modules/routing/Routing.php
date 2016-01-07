@@ -71,10 +71,10 @@ class Routing
     }
 
     public function getPath($bundleName, $routeName){
-        if(!isset($this->routes[$bundleName], $this->routes[$bundleName][$routeName])){
+        if(!isset($this->routes[$bundleName], $this->routes[$bundleName]['routes'][$routeName])){
             throw new Exception('Такого роута не существует');
         }
-        return $this->routes[$bundleName][$routeName]['path'];
+        return $this->routes[$bundleName]['routes'][$routeName]['path'];
     }
 
     public function goToRoute($bundleName, $routeName){

@@ -1,4 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
+/web/assets/js/libraries/bower_components
 /.idea
 /vendor
+/config/db.php
+/config/mailer.php
 /web/assets/css/style.min.css
