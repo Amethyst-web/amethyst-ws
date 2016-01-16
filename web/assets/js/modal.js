@@ -9,6 +9,7 @@
     }
     $.fn.extend({
         modal: function(action){
+            var animationSpeed = 700;
             var modal = $(this);
             if(!modal.hasClass('modal')) {
                 console.error('This object is not modal');
@@ -17,7 +18,6 @@
             var fade = $('.modal-fade');
             switch (action){
                 case 'show':
-                    hideAll();
                     if(fade.length == 0) {
                         fade = $('<div class="modal-fade"></div>');
                         $('body').prepend(fade);
@@ -45,21 +45,29 @@
                     });
                     fade.click(hideAll);
                     fade.show();
+                    fade.animate({
+                        opacity: 1
+                    }, animationSpeed);
                     modal.show();
                     modal.css({
-                        top: -modal.height(),
-                        opacity: 0
+                        top: -modal.height()
                     });
                     modal.animate({
                         opacity: 1,
                         top: getTopPosition(modal)
-                    });
+                    }, animationSpeed);
                     setPosition(modal);
 
                     break;
                 case 'hide':
-                    fade.hide();
-                    modal.hide();
+                    fade.animate({
+                        opacity: 0
+                    }, animationSpeed, function(){ fade.hide(); });
+                    modal.animate({
+                        opacity: 0,
+                        top: -modal.height()
+                    }, animationSpeed, function(){modal.hide();});
+
                     break;
             }
 
