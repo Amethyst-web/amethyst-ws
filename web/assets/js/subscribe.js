@@ -23,3 +23,9 @@ $(document).ready(function(){
         });
     });
 });
+
+(function($){
+    $(window).load(function(){
+        $('#subscribe_terms').find('.text').mCustomScrollbar();
+    });
+})(jQuery);

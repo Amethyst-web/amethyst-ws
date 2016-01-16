@@ -26,5 +26,5 @@ try{
     die('Ошибка проверки роута: '.$ex->getMessage());
 }
 if($route === false){
-    $routing->goToRoute('main', '404');
+    $routing->goToRoute('front', 'home');
 }

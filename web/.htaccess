@@ -5,7 +5,7 @@ RewriteEngine On
 RewriteBase /
 
 # Redirect all requests to index.php ignoring listed files extensions
-RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|bmp)$
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|bmp|eot|svg|ttf|woff)$
 # Redirect all requests to index.php ignoring listed directories
 RewriteCond %{REQUEST_URI} !^/?(css|js|img|fonts|ect)/
 RewriteRule ^(.*)$ index.php [NC,L]

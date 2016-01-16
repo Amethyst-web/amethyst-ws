@@ -1,4 +1,8 @@
 @import "default";
+@import "../fonts/opensans_light/stylesheet.css";
+
+@import "modal";
+
 
 html{
   height: 100%;
@@ -10,7 +14,7 @@ body{
   background: url(../img/bg.png);
   color: #fff;
   background-size: cover;
-  font-family: "Open Sans",sans-serif;
+  font-family: open_sanslight, serif;
 }
 @top-menu-height: 80px;
 @footer-offer-height: 40px;
@@ -31,6 +35,22 @@ input,textarea{
   text-align: center;
   width: inherit;
   height: inherit;
+  .title{
+    display: inline-block;
+    font-weight: 100;
+    margin: auto;
+    margin-bottom: 20px;
+    p:first-child{
+      text-transform: uppercase;
+      letter-spacing: 13px;
+      font-size: 60pt;
+      line-height: 64px;
+    }
+    p:last-child{
+      text-align: right;
+      font-size: 23pt;
+    }
+  }
   .row{
     display: table;
     width: 100%;
@@ -38,38 +58,44 @@ input,textarea{
       display: table-cell;
       vertical-align: middle;
     }
-    &:first-child{
-      .name{
-        width: 40%;
-        &:first-child{
-          p{
-            margin-left: 80px;
-            margin-right: 20px;
-          }
-        }
-        &:last-child{
-          p{
-            margin-left: 20px;
-            margin-right: 80px;
-          }
-        }
+    .name{
+      width: 40%;
+      &:first-child{
         p{
-          border-bottom: 1px solid;
-          padding-bottom: 5px;
-          font-size: 1em;
-          text-transform: uppercase;
+          margin-left: 120px;
+          margin-right: 70px;
         }
       }
-      .amethyst{
-        width: 20%;
-        img{
-          width: 100%;
+      &:last-child{
+        p{
+          margin-left: 70px;
+          margin-right: 120px;
         }
+      }
+      p{
+        border-bottom: 1px solid;
+        padding-bottom: 5px;
+        font-size: 1em;
+        text-transform: uppercase;
+      }
+    }
+    .amethyst{
+      width: 20%;
+      img{
+        width: 100%;
       }
     }
   }
   .subscribe{
-    margin-top: 50px;
+    margin-top: 30px;
+    p{
+      font-size: 15px;
+      margin-bottom: 3px;
+      a{
+        color: white;
+        opacity: 0.7;
+      }
+    }
     .input-group{
       width: 500px;
       height: 45px;

@@ -8,9 +8,13 @@
 <html>
 <head>
     <title>Веб-студия Аметист</title>
-    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <link rel="stylesheet" href="/assets/css/style.min.css" charset="utf-8" />
+    <link rel="stylesheet" href="/assets/js/libraries/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" charset="utf-8" />
     <script type="text/javascript" src="/assets/js/libraries/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/libraries/bower_components/noty/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libraries/bower_components/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="/assets/js/libraries/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="/assets/js/modal.js"></script>
     <script type="text/javascript" src="/assets/js/libraries/functions.js"></script>
 </head>
 <body>
