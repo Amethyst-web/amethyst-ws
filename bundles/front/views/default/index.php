@@ -41,7 +41,7 @@
                     <div class="input-field">
                         <label for="email">Ваша почта</label>
                         <input type="email" name="email" id="email" placeholder="email@example.com">
-                        <p class="help-block">Чтобы мы знали, какуда Вам отправить интересующие Вас материалы.</p>
+                        <p class="help-block">Чтобы мы знали, куда Вам отправить интересующие Вас материалы.</p>
                     </div>
                     <button type="submit" class="btn">Заказать</button>
                 </form>
