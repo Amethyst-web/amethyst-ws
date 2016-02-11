@@ -36,7 +36,7 @@
                     <div class="input-field">
                         <label for="phone">Ваш телефон</label>
                         <input type="text" name="phone" id="phone" placeholder="+7(123)456-78-90">
-                        <p class="help-block">Чтобы мы знали, какуда Вам звонить.</p>
+                        <p class="help-block">Чтобы мы знали, куда Вам звонить.</p>
                     </div>
                     <div class="input-field">
                         <label for="email">Ваша почта</label>
