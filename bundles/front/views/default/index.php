@@ -103,8 +103,10 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('.screen').css('min-height', $(window).height());
+        $('.screen#price .wrapper').css('bottom',$(window).height() <= 720 ? '0' : '180px');
         $(window).resize(function(){
             $('.screen').css('min-height', $(window).height());
+            $('.screen#price .wrapper').css('bottom',$(window).height() <= 720 ? '0' : '180px');
         });
         var $form = $('form');
         $form.find("[name='phone']").inputmask("+7 (999) 999-99-99");
