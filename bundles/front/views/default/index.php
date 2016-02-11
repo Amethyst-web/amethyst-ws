@@ -103,6 +103,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('.screen').css('min-height', $(window).height());
+        $(window).resize(function(){
+            $('.screen').css('min-height', $(window).height());
+        });
         var $form = $('form');
         $form.find("[name='phone']").inputmask("+7 (999) 999-99-99");
         $form.submit(function(e){
