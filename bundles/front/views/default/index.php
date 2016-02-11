@@ -58,6 +58,7 @@
                     <li>Слайдер</li>
                     <li>Форма обратной связи</li>
                 </ul>
+                <p class="price"> от 30.000 р.</p>
             </div><div class="offer">
                 <p class="title">Информационный сайт/блог</p>
                 <ul>
@@ -65,6 +66,7 @@
                     <li>Комментарии (с модерацией)</li>
                     <li>Форма обратной связи</li>
                 </ul>
+                <p class="price"> от 50.000 р.</p>
             </div><div class="offer">
                 <p class="title">Интернет-магазин</p>
                 <ul>
@@ -73,6 +75,7 @@
                     <li>Корзина</li>
                     <li>Онлайн-оплата</li>
                 </ul>
+                <p class="price"> от 100.000 р.</p>
             </div>
             <div class="custom text-center">
                 <p>Если Вы не увидели свой вариант среди предложенных нами, не отчаивайтесь, закажите обратный звонок и мы обсудим Ваш будующий сайт!</p>
@@ -85,12 +88,12 @@
             <h2>Портфолио</h2>
             <div>
                 <a href="http://hookah-msk.ru" target="_blank">
-                    <img src="/assets/img/portfolio/profruss.jpg" alt="profruss.ru" width="370" height="294">
+                    <img src="/assets/img/portfolio/profruss.jpg" alt="profruss.ru" height="294">
                     <p>Я говорю по-русски</p>
                 </a>
             </div><div>
                 <a href="http://profruss.ru" target="_blank">
-                    <img src="/assets/img/portfolio/hookah.jpg" alt="profruss.ru" width="370" height="294">
+                    <img src="/assets/img/portfolio/hookah.jpg" alt="profruss.ru" height="294">
                     <p>Кальянная на Одрадной</p>
                 </a>
             </div>
