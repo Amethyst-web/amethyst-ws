@@ -31,3 +31,4 @@ cd ../web/assets/js/libraries
 bower install --allow-root jquery
 bower install --allow-root noty
 bower install --allow-root malihu-custom-scrollbar-plugin
+npm i jquery.inputmask

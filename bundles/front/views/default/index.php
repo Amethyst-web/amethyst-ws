@@ -2,62 +2,145 @@
 /**
  * Created by PhpStorm.
  * User: Nikita
- * Date: 05.01.2016
- * Time: 13:10
+ * Date: 11.02.2016
+ * Time: 11:17
  */
-use config\App;
 ?>
-
 <div class="index-content">
-    <div class="title">
-        <p>Amethyst</p>
-        <p>web studio</p>
-    </div>
-    <div class="row">
-        <div class="name"><p>Ryazantsev Sergey</p></div>
-        <div class="amethyst"><img src="/assets/img/amethyst.png" alt="amethyst"></div>
-        <div class="name"><p>Leshchev Nikita</p></div>
-    </div>
-    <div class="subscribe">
-        <p>Узнавайте наши новости первыми:</p>
-        <form method="post" id="subscribe-form">
-            <div class="input-group">
-                <input type="email" name="email" id="email" placeholder="Ваш Email"><button type="submit">Подписаться</button>
+    <div class="screen" id="main">
+        <div class="wrapper">
+            <div></div><div>
+                <h1>Amethyst</h1>
+                <h3>web studio</h3>
+                <p class="utp">Сначала работа, потом деньги. Платите только за то, что уже сделано.</p>
+                <p class="utp">Закажите уникальный сайт у нас, а мы позаботимся о нём.</p>
+                <a href="#order" class="scroll-to btn">Заказать</a>
             </div>
-        </form>
-        <p><a href="#subscribe_terms" data-action="show-modal">Подписываясь, вы соглашаетесь с условиями подписки</a></p>
-    </div>
-</div>
-
-<div class="modal" id="subscribe_terms" data-width="big">
-    <div class="modal-body">
-        <div class="modal-header">
-            <div class="modal-close"><a href="#" data-action="close">X</a></div>
-            Соглашение на получение рассылки
         </div>
     </div>
-    <div class="modal-content">
-        <div class="text">
-            <p>Давая согласие на получение рассылки рекламно-информационного характера Пользователь выражает согласие со следующими условиями:</p>
-            <ol>
-                <li>Пользователь несет полную ответственность за любые действия, совершенные им или третьими лицами, которым он предоставил данные с адресом электронной почты (логином) и/или паролем, в том числе при использовании чужого адреса электронной почты (логина) и пароля для регистрации, а также за любые последствия, которые могло повлечь или повлекло подобное их использование.</li>
-                <li>Подписка на получение информационной рассылки <?=App::LEGAL_ENTITY?> доступна только для личного некоммерческого использования Пользователем. Все тексты, статьи, изображения, видео файлы являются собственностью <?=App::LEGAL_ENTITY?>. Нарушением авторских и исключительных прав <?=App::LEGAL_ENTITY?> будет являться плагиат, копирование и распространение видеоматериалов в открытом доступе частично или полностью, сдача в аренду, прокат, передача в публичные и электронные библиотеки. Любое нарушение использования интеллектуальной собственности <?=App::LEGAL_ENTITY?> (копирование объектов, использование в целях продаж), размещенных на Сайтах, как в открытом доступе, так и закрытом, влечёт за собой административную, гражданско-правовую и уголовную ответственность, согласно действующему законодательству Российской Федерации, если не было получено письменного разрешения <?=App::LEGAL_ENTITY?>.</li>
-                <li>Подписка на получение информационной рассылки <?=App::LEGAL_ENTITY?> так же получение самой информационной рассылки <?=App::LEGAL_ENTITY?>, является бесплатной.</li>
-                <li>Администратор сайта <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a> оставляет за собой право по своему собственному усмотрению при обнаружении угрозы для сайта <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a> и/или его пользователей, приостанавливать, ограничивать или прекращать доступ Пользователя к получению им анонсов, на которые он подписан, в любое время по любой причине или без объяснения причин, с предварительным уведомлением или без такового.</li>
-                <li>Пользователь несет личную ответственность за всю информацию об адресе электронной почты (логине) и пароле, которые он размещает в регистрационной форме на сайте <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a> при подписке на информационную рассылку <?=App::LEGAL_ENTITY?>.</li>
-                <li>Размещая свою информацию форме подписки на сайте <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a> при подписке на информационную рассылку <?=App::LEGAL_ENTITY?>, Пользователь уполномочивает Администратора сайта <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a> делать архивные резервные копии базы данных сайта, которые могут включать в себя регистрационную информацию Пользователя, с целью упорядочения и хранения информации, представленной на сайте <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a></li>
-                <li>В случае, если Пользователь решит удалить свои регистрационные данные, «отписавшись» от информационной рассылки проекта <?=App::LEGAL_ENTITY?>, Администратор сайта <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a> может сохранять архивные резервные копии регистрационных данных Пользователя.</li>
-                <li><?=App::LEGAL_ENTITY?> и Администратор сайта <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a> не несут ответственности за любые ошибки, упущения, прерывания, удаление, дефекты, задержку в обработке или передаче почтовых сообщений с информационной рассылкой <?=App::LEGAL_ENTITY?>. Администратор сайта <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a> и <?=App::LEGAL_ENTITY?> не отвечают за любые технические сбои или иные проблемы любых телефонных сетей или служб, компьютерных систем, серверов или провайдеров, компьютерного оборудования, программного обеспечения, сбоев сервисов электронной почты или скриптов по техническим причинам.</li>
-                <li>Администратор сайта <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a> и <?=App::LEGAL_ENTITY?> сохраняют за собой право в любое время изменять оформление сайта, его контент, список сервисов, изменять или дополнять используемые скрипты, программное обеспечение и другие объекты, используемые или хранящиеся на сайте, любые серверные приложения в любое время с предварительным уведомлением или без такового.</li>
-                <li>Администратор сайта <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a> и <?=App::LEGAL_ENTITY?> подтверждают сохранение в тайне и не предоставление третьим лицам регистрационных данных покупателя, оставленных им при подписке на получение информационной рассылки <?=App::LEGAL_ENTITY?>.</li>
-                <li><?=App::LEGAL_ENTITY?> будет использовать адрес электронной почты, указанный покупателем при подписке на информационную рассылку <?=App::LEGAL_ENTITY?>, для рассылки той, информации, на которую непосредственно подписался Пользователь, а также любой другой информации о <?=App::LEGAL_ENTITY?> и информации рекламного характера партнеров <?=App::LEGAL_ENTITY?>.</li>
-                <li>Принимая настоящее пользовательское соглашение, Пользователь подтверждает, что дает свое согласие на получение на указанный им адрес электронной почты рекламной и иной информации, строго в соответствии с темой подписки.</li>
-                <li>Если Пользователь не желает получать рассылки от <a href="<?=App::SITE_PATH?>"><?=App::SITE_NAME?></a>, он может отказаться от рассылки, пройдя по ссылке, внизу письма из рассылки. Заполняя форму для подписки, а также нажимая кнопку «Подписаться» вы даете согласие на получение рассылки, на всех условиях описанных в данном соглашении.</li>
-            </ol>
+    <div class="screen" id="order">
+        <div class="wrapper">
+            <div>
+                <h2>Заказ вашего сайта</h2>
+                <p>
+                    После заполнения формы обратной связи с Вами свяжется менеджер, и мы обсудим Ваш будующий сайт!
+                </p>
+            </div><div>
+                <form>
+                    <p>Закажите звонок через форму обратной связи и получите <span class="big">5%</span> скидку.</p>
+                    <div class="input-field">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" name="name" id="name">
+                        <p class="help-block">Чтобы мы знали, как к Вам обращаться.</p>
+                    </div>
+                    <div class="input-field">
+                        <label for="phone">Ваш телефон</label>
+                        <input type="text" name="phone" id="phone" placeholder="+7(123)456-78-90">
+                        <p class="help-block">Чтобы мы знали, какуда Вам звонить.</p>
+                    </div>
+                    <div class="input-field">
+                        <label for="email">Ваша почта</label>
+                        <input type="email" name="email" id="email" placeholder="email@example.com">
+                        <p class="help-block">Чтобы мы знали, какуда Вам отправить интересующие Вас материалы.</p>
+                    </div>
+                    <button type="submit" class="btn">Заказать</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="screen" id="price">
+        <div class="wrapper">
+            <h2 class="text-center">Цены</h2>
+            <div class="offer">
+                <p class="title">Лэндинг</p>
+                <ul>
+                    <li>Уникальный современный дизайн</li>
+                    <li>Слайдер</li>
+                    <li>Форма обратной связи</li>
+                </ul>
+            </div><div class="offer">
+                <p class="title">Информационный сайт/блог</p>
+                <ul>
+                    <li>Уникальный дизайн</li>
+                    <li>Комментарии (с модерацией)</li>
+                    <li>Форма обратной связи</li>
+                </ul>
+            </div><div class="offer">
+                <p class="title">Интернет-магазин</p>
+                <ul>
+                    <li>Продающий дизайн</li>
+                    <li>Каталог</li>
+                    <li>Корзина</li>
+                    <li>Онлайн-оплата</li>
+                </ul>
+            </div>
+            <div class="custom text-center">
+                <p>Если Вы не увидели свой вариант среди предложенных нами, не отчаивайтесь, закажите обратный звонок и мы обсудим Ваш будующий сайт!</p>
+                <a href="#order" class="scroll-to btn">Заказать</a>
+            </div>
+        </div>
+    </div>
+    <div class="screen" id="portfolio">
+        <div class="wrapper text-center">
+            <h2>Портфолио</h2>
+            <div>
+                <a href="http://hookah-msk.ru" target="_blank">
+                    <img src="/assets/img/portfolio/profruss.jpg" alt="profruss.ru" width="370" height="294">
+                    <p>Я говорю по-русски</p>
+                </a>
+            </div><div>
+                <a href="http://profruss.ru" target="_blank">
+                    <img src="/assets/img/portfolio/hookah.jpg" alt="profruss.ru" width="370" height="294">
+                    <p>Кальянная на Одрадной</p>
+                </a>
+            </div>
         </div>
     </div>
 </div>
 <script type="text/javascript">
-    var subscribe_path = '<?=$this->getPath('front', 'subscribe')?>';
+    $(document).ready(function(){
+        var $form = $('form');
+        $form.find("[name='phone']").inputmask("+7 (999) 999-99-99");
+        $form.submit(function(e){
+            e.preventDefault();
+            var $emailField = $form.find('[name=email]');
+            var $nameField = $form.find('[name=name]');
+            var $phoneField = $form.find('[name=phone]');
+            $emailField.removeClass('error');
+            var email = $emailField.val();
+            var errors = false;
+            if(!checkEmail(email)){
+                $emailField.addClass('error');
+                errors = true;
+            }
+            var phone = $phoneField.val();
+            if(!checkPhone(phone)){
+                $phoneField.addClass('error');
+                errors = true;
+            }
+            var name = $nameField.val().trim();
+            if(name.length === 0){
+                $nameField.addClass('error');
+                errors = true;
+            }
+            if(errors) {
+                return false;
+            }
+            $.post('/add-request', {email: email, phone: phone, name: name}, function(data){
+                if(!checkData(data)) return false;
+                if(!data.result){
+                    errorNoty(data.error);
+                    return false;
+                } else {
+                    successNoty(data.message);
+                    $form.find('input').val('')
+                }
+            });
+        });
+        $('.scroll-to').click(function(e){
+            e.preventDefault();
+            var position = $($(this).attr('href')).position();
+            $('body').stop().animate({scrollTop:position.top}, '1500', 'swing');
+        });
+    });
 </script>
-<script type="text/javascript" src="/assets/js/subscribe.js"></script>

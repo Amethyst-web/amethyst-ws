@@ -8,3 +8,7 @@ routes:
     path: '/subscribe'
     controller: 'defaultController::subscribeAction'
     methods: 'POST'
+  addRequest:
+    path: '/add-request'
+    controller: 'defaultController::addRequestAction'
+    methods: 'POST'

@@ -14,23 +14,29 @@ use core\BaseModel;
 class Subscribers extends BaseModel
 {
     public $email;
+    public $name;
+    public $phone;
 
     public static function getTableName() {
         return 'subscribers';
     }
 
     protected function update() {
-        $prep = static::$con->prepare('UPDATE '.static::getTableName().' SET email = ? WHERE id = ?');
+        $prep = static::$con->prepare('UPDATE '.static::getTableName().' SET email = ?, name = ?, phone = ? WHERE id = ?');
         return $prep->execute([
             $this->email,
+            $this->name,
+            $this->phone,
             $this->id
         ]);
     }
 
     protected function insert() {
-        $prep = static::$con->prepare('INSERT INTO '.static::getTableName().' (email) VALUES (?)');
+        $prep = static::$con->prepare('INSERT INTO '.static::getTableName().' (email, name, phone) VALUES (?,?,?)');
         return $prep->execute([
-            $this->email
+            $this->email,
+            $this->name,
+            $this->phone
         ]);
     }
 }

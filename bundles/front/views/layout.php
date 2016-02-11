@@ -8,6 +8,7 @@
 <html>
 <head>
     <title>Веб-студия Аметист</title>
+    <meta name="viewport" content="width=1200">
     <link rel="stylesheet" href="/assets/css/style.min.css" charset="utf-8" />
     <link rel="stylesheet" href="/assets/js/libraries/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" charset="utf-8" />
     <script type="text/javascript" src="/assets/js/libraries/bower_components/jquery/dist/jquery.min.js"></script>
@@ -16,6 +17,7 @@
     <script type="text/javascript" src="/assets/js/libraries/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <script type="text/javascript" src="/assets/js/modal.js"></script>
     <script type="text/javascript" src="/assets/js/libraries/functions.js"></script>
+    <script type="text/javascript" src="/assets/js/libraries/node_modules/jquery.inputmask/dist/jquery.inputmask.bundle.js"></script>
 </head>
 <body>
 <!--    <div class="top-menu">-->
