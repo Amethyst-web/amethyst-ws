@@ -94,7 +94,7 @@
             </div><div>
                 <a href="http://profruss.ru" target="_blank">
                     <img src="/assets/img/portfolio/hookah.jpg" alt="profruss.ru" height="294">
-                    <p>Кальянная на Одрадной</p>
+                    <p>Кальянная на Отрадной</p>
                 </a>
             </div>
         </div>
