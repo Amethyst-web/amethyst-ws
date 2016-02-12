@@ -87,13 +87,13 @@
         <div class="wrapper text-center">
             <h2>Портфолио</h2>
             <div>
-                <a href="http://hookah-msk.ru" target="_blank">
+                <a href="http://profruss.ru" target="_blank">
                     <img src="/assets/img/portfolio/profruss.jpg" alt="profruss.ru" height="294">
                     <p>Я говорю по-русски</p>
                 </a>
             </div><div>
-                <a href="http://profruss.ru" target="_blank">
-                    <img src="/assets/img/portfolio/hookah.jpg" alt="profruss.ru" height="294">
+                <a href="http://hookah-msk.ru" target="_blank">
+                    <img src="/assets/img/portfolio/hookah.jpg" alt="hookah-msk.ru" height="294">
                     <p>Кальянная на Отрадной</p>
                 </a>
             </div>
