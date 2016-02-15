@@ -9,6 +9,9 @@
 <head>
     <title>Веб-студия Аметист</title>
     <meta name="viewport" content="width=1200">
+    <meta name="description" content="Веб студия Аметист. Разработка и сопровождение сайтов-визиток, лендингов, интернет-магазинов и др. настройка yandex direct и google adWords с уникальным дизайном и по доступным ценам. Сначала работа, потом деньги. Платите только за то, что уже сделано.">
+    <meta name="keywords" content="Веб студия, web studio, amethyst, аметист, веб, сайты, разработка сайтов, лендинг, сайт-визитка, интернет-магазин, дизайн, заказать сайт, yandex direct, google adwords">
+    <meta name="author" content="Amethyst Web Studio">
     <link rel="stylesheet" href="/assets/css/style.min.css" charset="utf-8" />
     <link rel="stylesheet" href="/assets/js/libraries/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" charset="utf-8" />
     <script type="text/javascript" src="/assets/js/libraries/bower_components/jquery/dist/jquery.min.js"></script>
@@ -18,6 +21,7 @@
     <script type="text/javascript" src="/assets/js/modal.js"></script>
     <script type="text/javascript" src="/assets/js/libraries/functions.js"></script>
     <script type="text/javascript" src="/assets/js/libraries/node_modules/jquery.inputmask/dist/jquery.inputmask.bundle.js"></script>
+    <?php include 'analytics.php'?>
 </head>
 <body>
 <!--    <div class="top-menu">-->

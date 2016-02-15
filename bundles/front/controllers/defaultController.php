@@ -56,7 +56,48 @@ class defaultController extends BaseController
         $subscriber->email = $email;
         $subscriber->name = $name;
         $subscriber->phone = $phone;
-        if($subscriber->save()){
+        $mailer = new Mailer();
+        $mailer->setFrom('info@amethyst-ws.ru', 'Поддержка Amethyst Web Studio');
+        $mailer->addAddress($subscriber->email, $subscriber->name);
+        $mailer->Subject = 'Спасибо за заявку.';
+        $mailer->Body = '<html>
+                            <head>
+                                <meta charset="utf-8">
+                            </head>
+                            <body>
+                                <h1>Здравствуйте, уважаемый, '.$subscriber->name.'!</h1>
+                                <p>Спасибо за оставленную заявку на нашем сайте. В ближайшее время с Вами свяжется наш представитель, и вы сможете обсудить с ним все детали касательно разработки Вашего сайта.</p>
+                                <p>Спасибо за проявленный интерес к нашей Веб студии</p>
+                                </br></br>
+                                <p>С наилучшими пожеланиями технический директор Amethyst Web Studio, Лещёв Никита.</p>
+                                <p>Если вдруг сотрудник с Вами не связался, напишите лично мне: <a href="mailto:nikita@amethyst-ws.ru">nikita@amethyst-ws.ru</a></p>
+                            </body>
+                        </html>';
+        $mailer->AltBody = 'Здравствуйте, уважаемый, '.$subscriber->name.'! Спасибо за оставленную заявку на нашем сайте.
+                            В ближайшее время с Вами свяжется наш представитель, и вы сможете обсудить с ним все детали касательно разработки Вашего сайта.
+                            Спасибо за проявленный интерес к нашей Веб студии.
+                            С наилучшими пожеланиями технический директор Amethyst Web Studio, Лещёв Никита.
+                            Если вдруг сотрудник с Вами не связался, напишите лично мне: nikita@amethyst-ws.ru';
+        $clientMailSent = $mailer->send();
+        if($clientMailSent && $subscriber->save()){
+            $ourMailer = new Mailer();
+            $ourMailer->setFrom('info@amethyst-ws.ru', 'Поддержка Amethyst Web Studio');
+            $ourMailer->addAddress('mail@amethyst-ws.ru');
+            $ourMailer->addAddress('sergey@amethyst-ws.ru');
+            $ourMailer->Subject = 'Новый лид с сайта.';
+            $ourMailer->Body = '<html>
+                                    <head>
+                                        <meta charset="utf-8">
+                                    </head>
+                                    <body>
+                                        <p>У нас новая заявка:</p>
+                                        <p>Имя: '.$subscriber->name.'</p>
+                                        <p>Телефон: <a href="tel:'.$subscriber->phone.'">'.$subscriber->phone.'</a></p>
+                                        <p>Почта: <a href="mailto: '.$subscriber->email.'">'.$subscriber->email.'</a></p>
+                                    </body>
+                                </html>';
+            $ourMailer->AltBody = '';
+            $ourMailer->send();
             return $this->successJSONResponse('Заявка успешно оформлена! В ближайшее время с Вами свяжется наш менеджер!');
         } else {
             return $this->successJSONResponse('Не удалось оформить заявку! Попробуйте позже.');
@@ -81,6 +122,7 @@ class defaultController extends BaseController
         if(!$mailSent || $subscriber->save() !== true){
             return $this->errorJSONResponse('Не удалось подписаться. Попробуйте позже.'.$mailSent ? ' Письмо отправлено по ошибке.' : '');
         }
+
         return $this->successJSONResponse('Подписка успешно оформлена! Уже в ближайшем будущем ждите интересных новостей и предложений!');
     }
 }
