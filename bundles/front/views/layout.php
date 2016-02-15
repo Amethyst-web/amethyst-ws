@@ -50,7 +50,7 @@
             <ul class="menu horizontal social">
                 <li>Следите за нами: </li>
                 <li><a href="https://www.behance.net/AmethystWebStudio" class="be" title="Be"></a></li>
-                <li><a href="http://vk.com/amethystwebstudio" class="vk" title="Вконтакте"></a></li>
+                <li><a href="http://vk.com/amethyst_ws" class="vk" title="Вконтакте"></a></li>
                 <li><a href="https://www.instagram.com/amethyst_web_studio/?ref=badge" class="inst" title="Instagramm"></a></li>
                 <li><a href="https://www.facebook.com/amethystwebstudio/" class="fb" title="Facebook"></a></li>
             </ul>
