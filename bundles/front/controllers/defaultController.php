@@ -23,6 +23,9 @@ class defaultController extends BaseController
      * Главная
      */
     public function indexAction(){
+        if(isset($_GET['utm_source'])){
+            setcookie('utm_source', $_GET['utm_source']);
+        }
         $this->render();
     }
 
@@ -50,12 +53,13 @@ class defaultController extends BaseController
         }
         $subscriber = Subscribers::getOne(['email' => $email]);
         if($subscriber !== false){
-            return $this->errorJSONResponse('Вы уже подписаны на нашу рассылку', 501);
+            return $this->errorJSONResponse('Вы уже заказывали звонок!', 501);
         }
         $subscriber = new Subscribers();
         $subscriber->email = $email;
         $subscriber->name = $name;
         $subscriber->phone = $phone;
+        $subscriber->source = isset($_GET['utm_source']) ? $_GET['utm_source'] : (isset($_COOKIE['utm_source']) ? $_COOKIE['utm_source'] : '');
         $mailer = new Mailer();
         $mailer->setFrom('info@amethyst-ws.ru', 'Поддержка Amethyst Web Studio');
         $mailer->addAddress($subscriber->email, $subscriber->name);
