@@ -6,6 +6,38 @@
  * Time: 11:17
  */
 ?>
+<!-- Google Code for &#1051;&#1080;&#1076;&#1099; &#1089; &#1075;&#1083;&#1072;&#1074;&#1085;&#1086;&#1081; Conversion Page
+In your html page, add the snippet and call
+goog_report_conversion when someone clicks on the
+chosen link or button. -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    goog_snippet_vars = function() {
+        var w = window;
+        w.google_conversion_id = 931630775;
+        w.google_conversion_label = "Z6vpCP-5iWQQt52evAM";
+        w.google_remarketing_only = false;
+    }
+    // DO NOT CHANGE THE CODE BELOW.
+    goog_report_conversion = function(url) {
+        goog_snippet_vars();
+        window.google_conversion_format = "3";
+        var opt = new Object();
+        opt.onload_callback = function() {
+            if (typeof(url) != 'undefined') {
+                window.location = url;
+            }
+        }
+        var conv_handler = window['google_trackConversion'];
+        if (typeof(conv_handler) == 'function') {
+            conv_handler(opt);
+        }
+    }
+    /* ]]> */
+</script>
+<script type="text/javascript"
+        src="//www.googleadservices.com/pagead/conversion_async.js">
+</script>
 <div class="index-content">
     <div class="screen" id="main">
         <div class="wrapper">
@@ -43,7 +75,7 @@
                         <input type="email" name="email" id="email" placeholder="email@example.com">
                         <p class="help-block">Чтобы мы знали, куда Вам отправить интересующие Вас материалы.</p>
                     </div>
-                    <button type="submit" class="btn">Заказать</button>
+                    <button type="submit" class="btn" onclick="goog_report_conversion('http://amethyst-ws.ru/add-request')">Заказать</button>
                     <p class="confidential text-center"><a href="#confidential_terms" data-action="show-modal">Политика конфиденциальности</a></p>
                 </form>
             </div>
