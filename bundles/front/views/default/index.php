@@ -54,9 +54,8 @@ chosen link or button. -->
         <div class="wrapper">
             <div>
                 <h2>Заказ вашего сайта</h2>
-                <p>
-                    После заполнения формы обратной связи с Вами свяжется менеджер, и мы обсудим Ваш будущий сайт!
-                </p>
+                <p>После заполнения формы обратной связи с Вами свяжется менеджер, и мы обсудим Ваш будущий сайт!</p>
+                <p class="additional">Или просто <a href="#contacts" class="scroll-to">позвоните</a> нам</p>
             </div><div>
                 <form>
                     <p>Закажите звонок через форму обратной связи и получите <span class="big">5%</span> скидку.</p>
@@ -161,6 +160,35 @@ chosen link or button. -->
                     <img src="/assets/img/portfolio/hookah.jpg" alt="hookah-msk.ru" height="294">
                     <p>Кальянная на Отрадной</p>
                 </a>
+            </div>
+        </div>
+    </div>
+    <div class="screen" id="contacts">
+        <div class="wrapper">
+            <h2 class="text-center">За результат отвечают</h2>
+            <div>
+                <div class="summary">
+                    <img src="/assets/img/avatar.jpg" alt="Лещёв Никита">
+                    <h3>Лещёв Никита</h3>
+                    <p>Технический директор</p>
+                    <a href="tel:+79250415184">+7(925)041-51-84</a>
+                    <a href="mailto:nikita@amethyst-ws.ru">nikita@amethyst-ws.ru</a>
+                </div>
+                <p class="biography">
+                    Я - квалифицированный web-разработчик с 5-летним опытом.
+                    Имею большой опыт в создании высоконагруженных систем и приложений.
+                    Мой принцип прост: "Если задача была поставлена, значит её можно решить".
+                    Поэтому каким бы сложным ни был Ваш проект, он реализуем!
+                </p>
+            </div><div>
+                <div class="summary">
+                    <img src="/assets/img/sergey.jpg" alt="Рязанцев Сергей">
+                    <h3>Рязанцев Сергей</h3>
+                    <p>Арт-директор</p>
+                    <a href="tel:+79264496377">+7(926)449-63-77</a>
+                    <a href="mailto:sergey@amethyst-ws.ru">sergey@amethyst-ws.ru</a>
+                </div>
+                <p class="biography"></p>
             </div>
         </div>
     </div>

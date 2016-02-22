@@ -57,6 +57,14 @@
         width: 830px;
         p{
           font-size: 29px;
+          &.additional{
+            font-size: 22px;
+            a{
+              color: #8C59B4;
+              text-decoration: none;
+              font-weight: bold;
+            }
+          }
         }
       }
       > div:last-child {
@@ -167,14 +175,6 @@
       padding: 15px 30px;
       vertical-align: top;
       min-height: 213px;
-      //background-color: #fff;
-      //transition: background-color @hover-transition-time;
-      //-webkit-transition: background-color @hover-transition-time;
-      //&:hover{
-      //  transition: background-color @hover-transition-time;
-      //  -webkit-transition: background-color @hover-transition-time;
-      //  background-color: #A792C4;
-      //}
       .title{
         font-size: 27px;
         text-align: center;
@@ -243,6 +243,43 @@
         transition: opacity @hover-transition-time;
         -webkit-transition: opacity @hover-transition-time;
         opacity: 1;
+      }
+    }
+  }
+  &#contacts{
+    background-image: url('../img/index/main_bg.jpg');
+    .wrapper{
+      h2{
+        margin-bottom: 33px;
+      }
+      >div{
+        width: 50%;
+        vertical-align: top;
+      }
+      .summary{
+        overflow: auto;
+        img{
+          float: left;
+          margin-right: 30px;
+        }
+        h3{
+          font-size: 35px;
+          font-weight: bold;
+          text-align: left;
+          margin-bottom: 15px;
+          padding-top: 30px;
+        }
+        p{
+          font-size: 19px;
+        }
+        a {
+          color: white;
+          text-decoration: none;
+          display: block;
+        }
+      }
+      .biography{
+        margin-top: 15px;
       }
     }
   }

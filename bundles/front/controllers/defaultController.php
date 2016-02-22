@@ -52,11 +52,10 @@ class defaultController extends BaseController
             return $this->errorJSONResponse('Имя не может быть пустым или больше 50 символов');
         }
         $subscriber = Subscribers::getOne(['email' => $email]);
-        if($subscriber !== false){
-            return $this->errorJSONResponse('Вы уже заказывали звонок!', 501);
+        if($subscriber === false){
+            $subscriber = new Subscribers();
+            $subscriber->email = $email;
         }
-        $subscriber = new Subscribers();
-        $subscriber->email = $email;
         $subscriber->name = $name;
         $subscriber->phone = $phone;
         $subscriber->source = isset($_GET['utm_source']) ? $_GET['utm_source'] : (isset($_COOKIE['utm_source']) ? $_COOKIE['utm_source'] : '');

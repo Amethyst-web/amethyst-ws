@@ -39,9 +39,9 @@
 <!--    </div>-->
     <?php include $content; ?>
     <div class="footer">
-        <div class="offer">
-            <p>Расскажи о нас друзьям и получи скидку на наши услуги</p>
-        </div>
+<!--        <div class="offer">-->
+<!--            <p>Расскажи о нас друзьям и получи скидку на наши услуги</p>-->
+<!--        </div>-->
         <div class="content">
             <ul class="menu horizontal">
                 <li class="logo"><a href="/"></a></li>
