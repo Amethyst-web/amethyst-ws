@@ -81,6 +81,38 @@ chosen link or button. -->
             </div>
         </div>
     </div>
+    <div class="screen" id="iterations">
+        <div class="wrapper">
+            <h2 class="text-center">Этапы разработки</h2>
+            <table>
+                <tr>
+                    <td rowspan="2"><p>Обсуждение пожеланий клиента</p></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td rowspan="2"><p>Составление ТЗ</p></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><p>Разработка наскольких примеров визуального оформления сайта</p></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td rowspan="2"><p>Разработка макета и утверждение его с заказчиком + 50% оплата</p></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><p>Вёрстка и программирование</p></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td rowspan="2"><p>Представление полностью рабочего сайта. Передача полных доступов к сайту после 100% оплаты</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
     <div class="screen" id="price">
         <div class="wrapper">
             <h2 class="text-center">Цены</h2>

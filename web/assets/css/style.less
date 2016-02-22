@@ -111,6 +111,43 @@
       }
     }
   }
+  &#iterations{
+    background: #fff;
+    color: #000;
+    table{
+      margin-top: 30px;
+      tr{
+        &:nth-child(odd) {
+          td:nth-child(2){
+            background: url(../img/iter.png) no-repeat;
+            height: 80px;
+            width: 150px;
+            background-position-x: center;
+          }
+          td:first-child{
+            width: 525px;
+            p{
+              text-align: right;
+            }
+          }
+        }
+        &:nth-child(even){
+          td:last-child{
+            width: 525px;
+          }
+          td:first-child{
+            background: url(../img/iter.png) no-repeat;
+            height: 80px;
+            width: 150px;
+            background-position-x: center;
+          }
+        }
+        p{
+          font-size: 25px;
+        }
+      }
+    }
+  }
   &#price{
     background: #fff;
     color: #000;
