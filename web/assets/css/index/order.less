@@ -1,0 +1,73 @@
+&#order{
+  background-image: url('../img/index/order_bg.jpg');
+  color: #000;
+  .wrapper {
+    h2{
+      margin-top: 0;
+    }
+    > div:first-child {
+      width: 830px;
+      p{
+        font-size: 29px;
+        &.additional{
+          font-size: 22px;
+          a{
+            color: #8C59B4;
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    > div:last-child {
+      width: 370px;
+      height: 100%;
+    }
+  }
+  form{
+    background: #4f2e69;
+    background: -webkit-linear-gradient(#604079, #3c195a);
+    background: -o-linear-gradient(#604079, #3c195a);
+    background: -moz-linear-gradient(#604079, #3c195a);
+    background: linear-gradient(#604079, #3c195a);
+    color: white;
+    padding: 20px;
+    height: 417px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 50px auto auto;
+    >p{
+      font-size: 19px;
+    }
+    span.big{
+      font-size: 22px;
+    }
+    .input-field{
+      display: block;
+      margin-top: 10px;
+      label,input,textarea,p.help-block{
+        display: block;
+      }
+      label, p.help-block{
+        font-size: 13px;
+      }
+      input{
+        border: none;
+        width: 100%;
+        padding: 8px 5px;
+        box-sizing: border-box;
+      }
+    }
+    [type=submit]{
+      display: block;
+      margin: 20px auto auto;
+    }
+    .confidential{
+      font-size: 13px;
+      a{
+        color: white;
+      }
+    }
+  }
+}
